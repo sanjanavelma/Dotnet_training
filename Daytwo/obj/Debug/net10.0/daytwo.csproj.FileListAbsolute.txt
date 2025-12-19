@@ -1,0 +1,15 @@
+C:\Users\Sanjana velma\Capgemini_training\daytwo\obj\Debug\net10.0\daytwo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sanjana velma\Capgemini_training\daytwo\obj\Debug\net10.0\daytwo.AssemblyInfoInputs.cache
+C:\Users\Sanjana velma\Capgemini_training\daytwo\obj\Debug\net10.0\daytwo.AssemblyInfo.cs
+C:\Users\Sanjana velma\Capgemini_training\daytwo\obj\Debug\net10.0\daytwo.csproj.CoreCompileInputs.cache
+C:\Users\Sanjana velma\Capgemini_training\daytwo\obj\Debug\net10.0\daytwo.sourcelink.json
+C:\Users\Sanjana velma\Capgemini_training\daytwo\bin\Debug\net10.0\daytwo.exe
+C:\Users\Sanjana velma\Capgemini_training\daytwo\bin\Debug\net10.0\daytwo.deps.json
+C:\Users\Sanjana velma\Capgemini_training\daytwo\bin\Debug\net10.0\daytwo.runtimeconfig.json
+C:\Users\Sanjana velma\Capgemini_training\daytwo\bin\Debug\net10.0\daytwo.dll
+C:\Users\Sanjana velma\Capgemini_training\daytwo\bin\Debug\net10.0\daytwo.pdb
+C:\Users\Sanjana velma\Capgemini_training\daytwo\obj\Debug\net10.0\daytwo.dll
+C:\Users\Sanjana velma\Capgemini_training\daytwo\obj\Debug\net10.0\refint\daytwo.dll
+C:\Users\Sanjana velma\Capgemini_training\daytwo\obj\Debug\net10.0\daytwo.pdb
+C:\Users\Sanjana velma\Capgemini_training\daytwo\obj\Debug\net10.0\daytwo.genruntimeconfig.cache
+C:\Users\Sanjana velma\Capgemini_training\daytwo\obj\Debug\net10.0\ref\daytwo.dll

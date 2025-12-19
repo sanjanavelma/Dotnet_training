@@ -1,0 +1,15 @@
+C:\Users\Sanjana velma\Capgemini_training\Dayone\bin\Debug\net10.0\FirstApp.exe
+C:\Users\Sanjana velma\Capgemini_training\Dayone\bin\Debug\net10.0\FirstApp.deps.json
+C:\Users\Sanjana velma\Capgemini_training\Dayone\bin\Debug\net10.0\FirstApp.runtimeconfig.json
+C:\Users\Sanjana velma\Capgemini_training\Dayone\bin\Debug\net10.0\FirstApp.dll
+C:\Users\Sanjana velma\Capgemini_training\Dayone\bin\Debug\net10.0\FirstApp.pdb
+C:\Users\Sanjana velma\Capgemini_training\Dayone\obj\Debug\net10.0\FirstApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sanjana velma\Capgemini_training\Dayone\obj\Debug\net10.0\FirstApp.AssemblyInfoInputs.cache
+C:\Users\Sanjana velma\Capgemini_training\Dayone\obj\Debug\net10.0\FirstApp.AssemblyInfo.cs
+C:\Users\Sanjana velma\Capgemini_training\Dayone\obj\Debug\net10.0\FirstApp.csproj.CoreCompileInputs.cache
+C:\Users\Sanjana velma\Capgemini_training\Dayone\obj\Debug\net10.0\FirstApp.sourcelink.json
+C:\Users\Sanjana velma\Capgemini_training\Dayone\obj\Debug\net10.0\FirstApp.dll
+C:\Users\Sanjana velma\Capgemini_training\Dayone\obj\Debug\net10.0\refint\FirstApp.dll
+C:\Users\Sanjana velma\Capgemini_training\Dayone\obj\Debug\net10.0\FirstApp.pdb
+C:\Users\Sanjana velma\Capgemini_training\Dayone\obj\Debug\net10.0\FirstApp.genruntimeconfig.cache
+C:\Users\Sanjana velma\Capgemini_training\Dayone\obj\Debug\net10.0\ref\FirstApp.dll
