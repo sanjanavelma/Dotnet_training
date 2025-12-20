@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sanjana velma\\FirstApp\\FirstApp.csproj",
+      "projectUniqueName": "C:\\Users\\Sanjana velma\\Capgemini_training\\FirstApp.csproj",
       "projectName": "FirstApp",
-      "projectPath": "C:\\Users\\Sanjana velma\\FirstApp\\FirstApp.csproj",
+      "projectPath": "C:\\Users\\Sanjana velma\\Capgemini_training\\FirstApp.csproj",
       "packagesPath": "C:\\Users\\Sanjana velma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sanjana velma\\FirstApp\\obj\\",
+      "outputPath": "C:\\Users\\Sanjana velma\\Capgemini_training\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sanjana velma\\AppData\\Roaming\\NuGet\\NuGet.Config"

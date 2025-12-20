@@ -5,6 +5,8 @@ class Program
         static void Main()
     {
         //Ge.Game();
-        Bank.Banking();
+        //Bank.Banking();
+        //Banking.FinanceBankingSystem();
+
     }
    }

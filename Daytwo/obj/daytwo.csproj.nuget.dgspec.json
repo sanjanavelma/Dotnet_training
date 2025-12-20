@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sanjana velma\\Capgemini_training\\daytwo\\daytwo.csproj": {}
+    "C:\\Users\\Sanjana velma\\Capgemini_training\\Daytwo\\daytwo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sanjana velma\\Capgemini_training\\daytwo\\daytwo.csproj": {
+    "C:\\Users\\Sanjana velma\\Capgemini_training\\Daytwo\\daytwo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sanjana velma\\Capgemini_training\\daytwo\\daytwo.csproj",
+        "projectUniqueName": "C:\\Users\\Sanjana velma\\Capgemini_training\\Daytwo\\daytwo.csproj",
         "projectName": "daytwo",
-        "projectPath": "C:\\Users\\Sanjana velma\\Capgemini_training\\daytwo\\daytwo.csproj",
+        "projectPath": "C:\\Users\\Sanjana velma\\Capgemini_training\\Daytwo\\daytwo.csproj",
         "packagesPath": "C:\\Users\\Sanjana velma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sanjana velma\\Capgemini_training\\daytwo\\obj\\",
+        "outputPath": "C:\\Users\\Sanjana velma\\Capgemini_training\\Daytwo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sanjana velma\\AppData\\Roaming\\NuGet\\NuGet.Config"
