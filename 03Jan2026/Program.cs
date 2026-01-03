@@ -12,6 +12,6 @@ class Program
         // }
         // string result = sb.ToString();
         // Console.WriteLine(result);
-        equals.CheckEquality();
+        Equalss.CheckEquality();
     }
 }

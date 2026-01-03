@@ -1,6 +1,6 @@
 using System;
 using System.Text;
-public class equals
+public class Equalss
 {
     public static void CheckEquality()
     {
@@ -9,5 +9,10 @@ public class equals
         Console.WriteLine(sb1.Equals(sb2));
         StringBuilder sb3 = sb1;
         Console.WriteLine(sb1.Equals(sb3));
+        Console.WriteLine(object.ReferenceEquals(sb2, sb3));
+        string str1 = "Hello";
+        string str2 = "Hello";
+        Console.WriteLine(str1 == str2);
+        Console.WriteLine(str1.Equals(str2));
     }
 }
