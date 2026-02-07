@@ -1,8 +1,8 @@
-﻿// using System;
-// using System.Data.SqlClient; // Use Microsoft.Data.SqlClient for modern .NET
-// using System.Data;
-// using System.Reflection.PortableExecutable;
-// using Microsoft.Data.SqlClient;
+﻿ using System;
+ using System.Data.SqlClient; // Use Microsoft.Data.SqlClient for modern .NET
+using System.Data;
+using System.Reflection.PortableExecutable;
+using Microsoft.Data.SqlClient;
 
 // class Program
 // {
@@ -83,23 +83,67 @@
 //     }
 // }
 //------------------------------------------------------------------------------------------------------------------------------------
+// class Program
+// {
+//     static void Main()
+//     {
+//         EmployeeRepository repo = new EmployeeRepository();
+
+//         Console.Write("Enter salary limit: ");
+
+//         if (int.TryParse(Console.ReadLine(), out int salary))
+//         {
+//             repo.GetEmployeesAboveSalary(salary);
+//         }
+//         else
+//         {
+//             Console.WriteLine("Invalid input.");
+//         }
+//     }
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         EmployeeRepository repo = new EmployeeRepository();
+
+//         repo.GetEmployeesAboveSalary(50000, 3);
+//     }
+// }
 class Program
 {
+    static string connectionString =
+        "Server=.\\SQLEXPRESS;Database=College;Trusted_Connection=True;TrustServerCertificate=True;";
+
     static void Main()
     {
-        EmployeeRepository repo = new EmployeeRepository();
+        Console.Write("Enter gender: ");
+        string gender = Console.ReadLine();
 
-        Console.Write("Enter salary limit: ");
+        using (SqlConnection con = new SqlConnection(connectionString))
+        using (SqlCommand cmd = new SqlCommand("uspGetGenderCount", con))
+        {
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-        if (int.TryParse(Console.ReadLine(), out int salary))
-        {
-            repo.GetEmployeesAboveSalary(salary);
-        }
-        else
-        {
-            Console.WriteLine("Invalid input.");
+            // input parameter
+            cmd.Parameters.AddWithValue("@gender", gender);
+
+            // output parameter
+            SqlParameter outputParam = new SqlParameter("@count", System.Data.SqlDbType.Int);
+            outputParam.Direction = System.Data.ParameterDirection.Output;
+            cmd.Parameters.Add(outputParam);
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+
+            int result = (int)outputParam.Value;
+
+            Console.WriteLine($"Count of {gender}: {result}");
         }
     }
 }
+
+
 
 
