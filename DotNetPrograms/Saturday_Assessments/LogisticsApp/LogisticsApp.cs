@@ -17,7 +17,7 @@ namespace LogisticsApp
             if (string.IsNullOrEmpty(ShipmentCode))
                 return false;
 
-            if (ShipmentCode.Length != 6)
+            if (ShipmentCode.Length != 7)
                 return false;
 
             if (!ShipmentCode.StartsWith("GC#"))
