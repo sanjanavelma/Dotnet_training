@@ -40,13 +40,49 @@ class Program
         // {
         //     Console.WriteLine(item.Key + " -> " + item.Value);
         // }
-        CalculateNumbers.AddNumber(50);
-        CalculateNumbers.AddNumber(50);
-        CalculateNumbers.AddNumber(50);        
-        CalculateNumbers.AddNumber(50);
-        CalculateNumbers.AddNumber(50);
-        double cgpa = CalculateNumbers.CalculateGPA();
-        Console.WriteLine(cgpa);
-        Console.WriteLine(CalculateNumbers.GetGrade(cgpa));
+        // CalculateNumbers.AddNumber(50);
+        // CalculateNumbers.AddNumber(50);
+        // CalculateNumbers.AddNumber(50);        
+        // CalculateNumbers.AddNumber(50);
+        // CalculateNumbers.AddNumber(50);
+        // double cgpa = CalculateNumbers.CalculateGPA();
+        // Console.WriteLine(cgpa);
+        // Console.WriteLine(CalculateNumbers.GetGrade(cgpa));
+        // MovieManager mg = new MovieManager();
+        // Console.WriteLine("Enter no of moives: ");
+        // int n = int.Parse(Console.ReadLine());
+        // for(int i = 0; i < n; i++)
+        // {
+        //     string[] input = Console.ReadLine().Split(",");
+        //     if(input.Length != 3)
+        //     {
+        //         continue;
+        //     }
+        //     Movie m = new Movie()
+        //     {
+        //         Title = input[0],
+        //         Genre = input[1],
+        //         Rating = double.Parse(input[2])
+        //     };
+        //     mg.AddMovie(m);
+        // }
+        // var film = mg.FilterByGenre("Action");
+        // foreach(var item in film)
+        // {
+        //     Console.WriteLine($"{item.Title} : {item.Genre} : {item.Rating}");
+        // }
+        // var sorting = mg.SortByRating();
+        // foreach(var item in sorting)
+        // {
+        //     Console.WriteLine($"{item.Title2} : {item.Genre} : {item.Rating}");
+        //}
+        YogaCenter yc = new YogaCenter();
+        Member m = new Member("Sanjana", 21, 1.65, 55, "WeightLoss");
+        yc.AddMember(m);
+        Member m1 = new Member("Ashi", 22, 1.0, 45, "Fitness");
+        yc.AddMember(m1);
+        Member m2 = new Member("Raima", 22, 1.5, 50, "Therapy");
+        yc.AddMember(m2);
+        yc.DisplayMembers();
     }
 }
