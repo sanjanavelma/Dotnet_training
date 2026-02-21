@@ -217,36 +217,57 @@
 //     }
 // }
 
+// using System;
+// using System.Collections.Generic;
+// using System.Linq;
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         List<string> a = new List<string>{"Mari", "Shiva", "Arjun", "Daniel", "University"};
+//         //Find the total count
+//         Console.Write("Count:");
+//         Console.WriteLine(a.Count());
+//         //2nd
+//         var longna = a.Where(n => n.Length > 4);
+//         foreach (var n in longna)
+//         {
+//             Console.WriteLine(n);
+//         }
+//         //3
+//         var names = a.Where(n => n.StartsWith("A"));
+//         foreach(var n in names)
+//         {
+//             Console.WriteLine(n);
+//         }
+//         //4th
+//         Console.WriteLine("Take ( first 2 )");
+//         var ftwo = a.Select(n => n.Substring(0, 2));
+//         foreach(var n in ftwo)
+//         {
+//             Console.WriteLine(n);
+//         }
+//     }
+// }
 using System;
 using System.Collections.Generic;
-using System.Linq;
-
+using System.Text;
 class Program
 {
     static void Main()
     {
-        List<string> a = new List<string>{"Mari", "Shiva", "Arjun", "Daniel", "University"};
-        //Find the total count
-        Console.Write("Count:");
-        Console.WriteLine(a.Count());
-        //2nd
-        var longna = a.Where(n => n.Length > 4);
-        foreach (var n in longna)
+        Console.WriteLine("Enter the no of codes: ");
+        int n = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter the codes: ");
+        string[] code;
+        for(int i = 0; i < n; i++)
         {
-            Console.WriteLine(n);
+            code.Append(Console.ReadLine());
         }
-        //3
-        var names = a.Where(n => n.StartsWith("A"));
-        foreach(var n in names)
+        foreach(var v in code)
         {
-            Console.WriteLine(n);
-        }
-        //4th
-        Console.WriteLine("Take ( first 2 )");
-        var ftwo = a.Select(n => n.Substring(0, 2));
-        foreach(var n in ftwo)
-        {
-            Console.WriteLine(n);
+            Console.WriteLine(StringValidation.Validate(v));
         }
     }
 }
