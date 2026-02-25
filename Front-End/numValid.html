@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Three Numbers</title>
+</head>
+<body>
+
+<h2>Add Three Numbers</h2>
+
+<form onsubmit="return addNumbers()">
+
+    <label>Number 1:</label>
+    <input type="number" id="num1"><br><br>
+
+    <label>Number 2 (1 to 100 only):</label>
+    <input type="number" id="num2"><br><br>
+
+    <label>Number 3:</label>
+    <input type="number" id="num3"><br><br>
+
+    <button type="submit">Add</button>
+
+</form>
+
+<h3 id="result"></h3>
+
+<script>
+function addNumbers() {
+
+    let num1 = document.getElementById("num1");
+    let num2 = document.getElementById("num2");
+    let num3 = document.getElementById("num3");
+
+    let n1 = num1.value.trim();
+    let n2 = num2.value.trim();
+    let n3 = num3.value.trim();
+
+    // Check empty fields individually
+    if (n1 === "") {
+        alert("Number 1 cannot be empty!");
+        num1.value = "";
+        num1.focus();
+        return false;
+    }
+
+    if (n2 === "") {
+        alert("Number 2 cannot be empty!");
+        num2.value = "";
+        num2.focus();
+        return false;
+    }
+
+    if (n3 === "") {
+        alert("Number 3 cannot be empty!");
+        num3.value = "";
+        num3.focus();
+        return false;
+    }
+
+    n1 = Number(n1);
+    n2 = Number(n2);
+    n3 = Number(n3);
+
+    // Check range of second number
+    if (n2 < 1 || n2 > 100) {
+        alert("Second number must be between 1 and 100!");
+        num2.value = "";
+        num2.focus();
+        return false;
+    }
+
+    // If everything valid
+    let sum = n1 + n2 + n3;
+    document.getElementById("result").innerHTML =
+        "Total Sum: " + sum;
+
+    // Clear all after success
+    num1.value = "";
+    num2.value = "";
+    num3.value = "";
+
+    return false;
+}
+</script>
+
+</body>
+</html>

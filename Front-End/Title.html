@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            My HTML Class
+        </title>
+    </head>
+    <body>
+        <p>
+            Check the browser tab title.
+        </p>
+        <nav>
+            <a href = "#">Home</a> |
+            <a href = "#">Courses</a> |
+            <a href = "#"> Contact</a>
+        <secton>
+            <h2> About Us</h2>
+            <p> We provide software training.</p>
+            <img src = "C:\Users\Sanjana velma\OneDrive\Desktop\me_formals.jpg" width = "100px" length = "100px" title = "Meeee">
+            <figcaption>My Photo</figcaption>
+            
+            <video controls width = "300">
+                <source src = "C:\Users\Sanjana velma\Videos\Screen Recordings\Screen Recording 2025-07-04 105710.mp4">
+            </video>
+            <br>
+            <audio controls>
+                <source src ="C:\Users\Sanjana velma\Downloads\domartistudios-magical-wizard-school-orchestral-fantasy-488126.mp3" type = "audio/mpeg">
+            </audio>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+            <ol>
+                <li>Step One</li>
+                <li>Step Two</li>
+            </ol>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Structure of web pages</dd>
+            </dl>
+            <table border="1">
+            <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Father</th>
+            <th>Mail</th>
+            <th>Marks</th>
+            </tr>
+            <tr>
+            <td>Sanjana</td>
+            <td>21</td>
+            <td>Raja Reddy</td>
+            <td>sanjanavelma27@mail.com</td>
+            <td>90</td>
+            </tr>
+            <tr>
+            <td>Ashi</td>
+            <td>22</td>
+            <td>Rando</td>
+            <td>ashi@mail.com</td>
+            <td>95</td>
+            </tr>
+            <tr>
+            <td>Raima</td>
+            <td>23</td>
+            <td>Shihab</td>
+            <td>Raima@mail.com</td>
+            <td>100</td>
+            </tr>
+            <tr>
+            <td>Shahid</td>
+            <td>20</td>
+            <td>Shaik</td>
+            <td>shahidballi@mail.com</td>
+            <td>80</td>
+            </tr>
+            </table>
+            <form>
+            Name: <input type="text">
+            </form>
+            <label>Email:</label>
+            <input type="email">
+            <button>Submit</button>
+               <h2>Add Three Numbers</h2>
+
+                <label>Number 1:</label>
+                <input type="number" id="num1"><br><br>
+
+                <label>Number 2 (1 to 100 only):</label>
+                <input type="number" id="num2"><br><br>
+
+                <label>Number 3:</label>
+                <input type="number" id="num3"><br><br>
+
+                <button onclick="addNumbers()">Add</button>
+
+                <h3 id="result"></h3>
+
+                <script>
+                    function addNumbers() {
+
+                let n1 = document.getElementById("num1").value.trim();
+                let n2 = document.getElementById("num2").value.trim();
+                let n3 = document.getElementById("num3").value.trim();
+
+                // Check empty
+                if (n1 === "" || n2 === "" || n3 === "") {
+                    alert("All fields are required!");
+                    return false; // stop form submission
+                }
+
+                n1 = Number(n1);
+                n2 = Number(n2);
+                n3 = Number(n3);
+
+                // Check range
+                if (n2 < 1 || n2 > 100) {
+                    alert("Second number must be between 1 and 100!");
+                    return false; // stop form submission
+                }
+
+                let sum = n1 + n2 + n3;
+
+                document.getElementById("result").innerHTML =
+                    "Total Sum: " + sum;
+
+                // Clear inputs only after success
+                document.getElementById("num1").value = "";
+                document.getElementById("num2").value = "";
+                document.getElementById("num3").value = "";
+
+                return false; 
+                }
+                </script>
+
+        </secton>
+        </nav>
+    </body>
+</html>

@@ -3,9 +3,7 @@ using System.Data;
 using Microsoft.Data.SqlClient;
 class Program
 {
-    static string connectionString =
-        "Server=localhost\\SQLEXPRESS;Database=EmployeeOperationsDB;Trusted_Connection=True;TrustServerCertificate=True;";
-
+    static string connectionString = "Server=localhost\\SQLEXPRESS;Database=EmployeeOperationsDB;Trusted_Connection=True;TrustServerCertificate=True;";
     static void Main()
     {
         Console.Write("Enter Department: ");
@@ -17,7 +15,6 @@ class Program
         GetDuplicateEmployees();
     }
 
-    // Part 1
     static void GetEmployeesByDepartment(string dept)
     {
         using (SqlConnection con = new SqlConnection(connectionString))
@@ -40,7 +37,6 @@ class Program
         }
     }
 
-    // Part 2
     static void GetDepartmentCount(string dept)
     {
         using (SqlConnection con = new SqlConnection(connectionString))
@@ -61,7 +57,6 @@ class Program
         }
     }
 
-    // Part 3
     static void GetEmployeeOrders()
     {
         using (SqlConnection con = new SqlConnection(connectionString))
@@ -83,7 +78,6 @@ class Program
         }
     }
 
-    // Part 4
     static void GetDuplicateEmployees()
     {
         using (SqlConnection con = new SqlConnection(connectionString))

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Registration Form</title>
+</head>
+<body>
+
+<h2>College Registration Form</h2>
+
+<form onsubmit="return validateForm()">
+
+
+    <label>Name:</label>
+    <input type="text" id="name"><br><br>
+
+    <label>Age (16-22):</label>
+    <input type="number" id="age"><br><br>
+
+    <label>State:</label>
+    <select id="state">
+        <option value="">-- Select State --</option>
+        <option>Andhra Pradesh</option>
+        <option>Arunachal Pradesh</option>
+        <option>Assam</option>
+        <option>Bihar</option>
+        <option>Chhattisgarh</option>
+        <option>Goa</option>
+        <option>Gujarat</option>
+        <option>Haryana</option>
+        <option>Himachal Pradesh</option>
+        <option>Jharkhand</option>
+        <option>Karnataka</option>
+        <option>Kerala</option>
+        <option>Madhya Pradesh</option>
+        <option>Maharashtra</option>
+        <option>Manipur</option>
+        <option>Meghalaya</option>
+        <option>Mizoram</option>
+        <option>Nagaland</option>
+        <option>Odisha</option>
+        <option>Punjab</option>
+        <option>Rajasthan</option>
+        <option>Sikkim</option>
+        <option>Tamil Nadu</option>
+        <option>Telangana</option>
+        <option>Tripura</option>
+        <option>Uttar Pradesh</option>
+        <option>Uttarakhand</option>
+        <option>West Bengal</option>
+    </select>
+    <br><br>
+
+    <label>Department:</label>
+    <select id="department">
+        <option value="">-- Select Department --</option>
+        <option>Computer Science Engineering</option>
+        <option>Information Technology</option>
+        <option>Electronics and Communication</option>
+        <option>Mechanical Engineering</option>
+        <option>Civil Engineering</option>
+        <option>Electrical Engineering</option>
+        <option>Artificial Intelligence</option>
+        <option>Data Science</option>
+        <option>Fine Arts</option>
+    </select>
+    <br><br>
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Others"> Others
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<h3 id="message"></h3>
+
+<script>
+function validateForm() {
+
+    let name = document.getElementById("name");
+    let age = document.getElementById("age");
+    let state = document.getElementById("state");
+    let department = document.getElementById("department");
+    let gender = document.querySelector('input[name="gender"]:checked');
+
+    if (name.value.trim() === "") {
+        alert("Name cannot be empty!");
+        name.focus();
+        return false;
+    }
+
+    if (age.value === "" || age.value < 16 || age.value > 22) {
+        alert("Age must be between 16 and 22!");
+        age.value = "";
+        age.focus();
+        return false;
+    }
+
+    if (state.value === "") {
+        alert("Please select a state!");
+        state.focus();
+        return false;
+    }
+
+    if (department.value === "") {
+        alert("Please select a department!");
+        department.focus();
+        return false;
+    }
+
+    if (!gender) {
+        alert("Please select your gender!");
+        return false;
+    }
+
+    document.getElementById("message").innerHTML =
+        "Form Submitted Successfully!";
+
+    return false;
+}
+</script>
+
+</body>
+</html>
