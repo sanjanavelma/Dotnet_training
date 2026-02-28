@@ -1,0 +1,35 @@
+/* ===== BODY ===== */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== MAIN CONTENT SPACING ===== */
+main {
+    padding-bottom: 40px;
+}
+
+/* ===== FORM STYLING ===== */
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== INPUT STYLING ===== */
+input, select {
+    margin-bottom: 12px;
+}
+
+/* ===== TABLE STYLING ===== */
+table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    font-size: 14px;
+}

@@ -5,19 +5,28 @@
 </head>
 <body>
 
-<h2>Page 2</h2>
+<h2 id="welcome"></h2>
 
-<p id="result"></p>
+<h3>Select a Mobile</h3>
+
+<button onclick="selectProduct('iPhone')">iPhone</button>
+<button onclick="selectProduct('Samsung')">Samsung</button>
+<button onclick="selectProduct('OnePlus')">OnePlus</button>
 
 <script>
-// read query string
-var params = new URLSearchParams(window.location.search);
+let name = sessionStorage.getItem("userName");
 
-var name = params.get("name");
-var city = params.get("city");
+if (!name) {
+    window.location.href = "page1.html";
+}
 
-document.getElementById("result").innerHTML =
-    "Name: " + name + "<br>City: " + city;
+document.getElementById("welcome").innerHTML = 
+"Welcome " + name + "! Please select a product.";
+
+function selectProduct(product) {
+    sessionStorage.setItem("selectedProduct", product);
+    window.location.href = "page3.html";
+}
 </script>
 
 </body>

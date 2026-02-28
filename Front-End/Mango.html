@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="showFruits()">Show Fruits</button>
+<p id="f"></p>
+
+<script>
+var fruits = ["Apple", "Mango", "Orange"];
+
+function showFruits(){
+    let text = "";
+    for(let i = 0; i < fruits.length; i++){
+        text += fruits[i] + " ";
+    }
+    document.getElementById("f").innerHTML = text;
+}
+</script>
+
+</body>
+</html>

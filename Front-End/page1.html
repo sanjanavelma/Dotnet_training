@@ -5,26 +5,26 @@
 </head>
 <body>
 
-<h2>Page 1</h2>
+<h2>Page 1 - Enter Details</h2>
 
-<label>Name:</label>
-<input type="text" id="name"><br><br>
+<form id="userForm">
+    ID: <input type="text" id="id" required><br><br>
+    Name: <input type="text" id="name" required><br><br>
+    Age: <input type="number" id="age" required><br><br>
 
-<label>City:</label>
-<input type="text" id="city"><br><br>
-
-<button onclick="goNext()">Go to Page 2</button>
+    <button type="submit">Next</button>
+</form>
 
 <script>
-function goNext() {
+document.getElementById("userForm").addEventListener("submit", function(e) {
+    e.preventDefault(); 
 
-    var name = document.getElementById("name").value;
-    var city = document.getElementById("city").value;
+    sessionStorage.setItem("userId", document.getElementById("id").value);
+    sessionStorage.setItem("userName", document.getElementById("name").value);
+    sessionStorage.setItem("userAge", document.getElementById("age").value);
 
-    // redirect with query string
-    window.location.href =
-        "page2.html?name=" + name + "&city=" + city;
-}
+    window.location.href = "page2.html";
+});
 </script>
 
 </body>

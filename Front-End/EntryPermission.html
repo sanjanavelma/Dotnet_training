@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Improved Entry Form</title>
+    <style>
+        body { font-family: Arial; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+
+<h2>Entry Validation Form</h2>
+
+<!-- Age -->
+Age:
+<input type="number" id="age"><br><br>
+
+<!-- Dropdown List -->
+Department:
+<select id="department">
+    <option value="">Select Department</option>
+    <option value="CSE">CSE</option>
+    <option value="ECE">ECE</option>
+    <option value="MECH">MECH</option>
+</select>
+<br><br>
+
+<!-- Proper HTML List -->
+<h3>Event Rules:</h3>
+<ul>
+    <li>Age must be 18 or above</li>
+    <li>At least one skill must be selected</li>
+    <li>ID proof is mandatory</li>
+</ul>
+
+<!-- Checkbox Group -->
+Skills:<br>
+<input type="checkbox" class="skills" value="HTML"> HTML<br>
+<input type="checkbox" class="skills" value="CSS"> CSS<br>
+<input type="checkbox" class="skills" value="JavaScript"> JavaScript<br><br>
+
+<!-- Textareas -->
+Reason for Entry:<br>
+<textarea id="reason" rows="4" cols="30"></textarea><br><br>
+
+Additional Notes:<br>
+<textarea id="notes" rows="3" cols="30"></textarea><br><br>
+
+<!-- Single Checkbox -->
+<input type="checkbox" id="idproof"> I Have Valid ID Proof<br><br>
+
+<button onclick="checkEntry()">Check Eligibility</button>
+
+<p id="msg"></p>
+
+<script>
+function checkEntry() {
+
+    let age = document.getElementById("age").value;
+    let dept = document.getElementById("department").value;
+    let idProof = document.getElementById("idproof").checked;
+    let reason = document.getElementById("reason").value.trim();
+    let skills = document.querySelectorAll(".skills:checked");
+    let message = document.getElementById("msg");
+
+    if(age >= 18 && dept !== "" && idProof && reason !== "" && skills.length > 0){
+        message.innerHTML = "Allowed ";
+        message.className = "success";
+    } else {
+        message.innerHTML = "Denied  Please complete all requirements.";
+        message.className = "error";
+    }
+}
+</script>
+
+</body>
+</html>

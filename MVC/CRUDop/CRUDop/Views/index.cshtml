@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "CRUD Without Backend";
+}
+
+<h2>CRUD Operation (Client Side Only)</h2>
+
+<input type="text" id="name" placeholder="Enter Name" />
+<input type="number" id="price" placeholder="Enter Price" />
+
+<br />
+<br />
+
+<button onclick="createItem()">Create</button>
+<button onclick="readItems()">Read</button>
+<button onclick="updateItem()">Update</button>
+<button onclick="deleteItem()">Delete</button>
+
+<br />
+<br />
+
+<table border="1" id="dataTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script>
+    let items = [];
+    let currentId = 1;
+
+    function createItem() {
+        let name = document.getElementById("name").value;
+        let price = document.getElementById("price").value;
+
+        if (name === "" || price === "") {
+            alert("Please enter all fields");
+            return;
+        }
+
+        items.push({
+            id: currentId++,
+            name: name,
+            price: price
+        });
+
+        alert("Item Created!");
+        clearFields();
+        readItems();
+    }
+
+    function readItems() {
+        let tableBody = document.querySelector("#dataTable tbody");
+        tableBody.innerHTML = "";
+
+        items.forEach(item => {
+            tableBody.innerHTML += `
+                <tr>
+                    <td>${item.id}</td>
+                    <td>${item.name}</td>
+                    <td>${item.price}</td>
+                </tr>
+            `;
+        });
+    }
+
+    function updateItem() {
+        let name = document.getElementById("name").value;
+        let price = document.getElementById("price").value;
+
+        let item = items.find(x => x.name === name);
+
+        if (item) {
+            item.price = price;
+            alert("Item Updated!");
+            readItems();
+        } else {
+            alert("Item Not Found!");
+        }
+
+        clearFields();
+    }
+
+    function deleteItem() {
+        let name = document.getElementById("name").value;
+
+        items = items.filter(x => x.name !== name);
+
+        alert("Item Deleted!");
+        readItems();
+        clearFields();
+    }
+
+    function clearFields() {
+        document.getElementById("name").value = "";
+        document.getElementById("price").value = "";
+    }
+</script>
